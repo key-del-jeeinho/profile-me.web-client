@@ -1,13 +1,16 @@
-const Theme = {
+import { DefaultTheme } from 'styled-components'
+
+const regularTheme: DefaultTheme = {
     sizes: {
         fonts: {
+            _unit: 'pt',
             regular: 10,
             bigger: 14,
-            btn: 20,
             btn_small: 14,
+            btn_regular: 20,
             title_sub: 20,
-            title: 48,
-            tag: 14
+            title_main: 48,
+            tag_regular: 14
         }
     },
     colors: {
@@ -34,4 +37,4 @@ const Theme = {
     }
 }
 
-export default Theme
+export default regularTheme
