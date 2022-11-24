@@ -1,16 +1,23 @@
 import { DefaultTheme } from 'styled-components'
 
 const regularTheme: DefaultTheme = {
+    shadows: {
+        fonts: {
+            thin: "0px 0px 1px #000",
+            light: "0px 0px 2px #000"
+        }
+    },
     sizes: {
         fonts: {
-            _unit: 'pt',
-            regular: 10,
-            bigger: 14,
-            btn_small: 14,
-            btn_regular: 20,
-            title_sub: 20,
-            title_main: 48,
-            tag_regular: 14
+            regular: "10pt",
+            bigger: "14pt",
+            btn_small: "14pt",
+            btn_regular: "20pt",
+            title_sub: "20pt",
+            title_main: "48pt",
+            nav_sub: "14pt",
+            nav_main: "20pt",
+            tag_regular: "14pt"
         }
     },
     colors: {

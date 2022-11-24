@@ -2,16 +2,23 @@ import 'styled-components'
 
 declare module 'styled-components' {
     export interface DefaultTheme {
+        shadows: {
+            fonts: {
+                thin: string
+                light: string
+            }
+        },
         sizes: {
             fonts: {
-                _unit: string,
-                regular: number,
-                bigger: number,
-                btn_small: number,
-                btn_regular: number,
-                title_sub: number,
-                title_main: number,
-                tag_regular: number
+                regular: string,
+                bigger: string,
+                btn_small: string,
+                btn_regular: string,
+                title_sub: string,
+                title_main: string,
+                nav_sub: string,
+                nav_main: string,
+                tag_regular: string
             }
         },
         colors: {
