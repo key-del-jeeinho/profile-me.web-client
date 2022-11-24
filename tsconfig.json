@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "/src/theme/styled.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "/src/theme/styled.d.ts", "src/components/**.stories.jsx"],
   "exclude": ["node_modules"]
 }
