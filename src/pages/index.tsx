@@ -1,9 +1,11 @@
 import { useTheme } from 'styled-components'
 
-export default function Index() {
+const Index = () => {
   const theme = useTheme()
   return (
     <>
     </>
   )
 }
+
+export default Index
