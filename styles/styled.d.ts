@@ -19,6 +19,9 @@ declare module 'styled-components' {
                 nav_sub: string,
                 nav_main: string,
                 tag_regular: string
+            },
+            strokes: {
+                regular: string
             }
         },
         colors: {
@@ -37,6 +40,7 @@ declare module 'styled-components' {
                 input: string
             },
             strokes: {
+                nav: string,
                 btn_form: string,
                 btn_cta: string,
                 input: string,

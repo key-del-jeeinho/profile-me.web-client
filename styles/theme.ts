@@ -18,6 +18,9 @@ const regularTheme: DefaultTheme = {
             nav_sub: "14pt",
             nav_main: "20pt",
             tag_regular: "14pt"
+        },
+        strokes: {
+            regular: "1px"
         }
     },
     colors: {
@@ -36,6 +39,7 @@ const regularTheme: DefaultTheme = {
             input: "#FFFFFF"
         },
         strokes: {
+            nav: "#000000",
             btn_form: "#000000",
             btn_cta: "#000000",
             input: "#000000",
