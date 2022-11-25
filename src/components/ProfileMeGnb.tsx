@@ -4,47 +4,42 @@ import ProfileMeGnbAttr from "./ProfileMeGnbAttr"
 const ProfileMeGnb = () => {
     const theme = useTheme()
 
-    const Meta = styled.div`
-    align-items: center;
-    `
-    const Style = styled.span`
-    display: grid;
-    padding-bottom: 10px;
+    const Attrs = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     &>*{
-        margin: auto;
-        grid-template-columns: repeat(3, 1fr);
-    }  
-    &>*>* {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
-    &::after {
-        content: "";
+    `
+    const Line = styled.div`
         display: block;
         width: 200px;
         border-bottom: ${theme.sizes.strokes.regular} ${theme.colors.strokes.nav} solid;
         margin: 10px auto;
-    } 
     `
 
-    return (<Meta><Style><span>
-        <ProfileMeGnbAttr
-            label="Profile"
-            link="/profile"
-            isMain={false}
-        />
-        <ProfileMeGnbAttr
-            label="Main"
-            link="/"
-            isMain={true}
-        />
-        <ProfileMeGnbAttr
-            label="Signin"
-            link="/siginin"
-            isMain={false}
-        /></span>
-    </Style></Meta>)
+    return (<>
+        <Attrs>
+            <ProfileMeGnbAttr
+                label="Profile"
+                link="/profile"
+                isMain={false}
+            />
+            <ProfileMeGnbAttr
+                label="Main"
+                link="/"
+                isMain={true}
+            />
+            <ProfileMeGnbAttr
+                label="Signin"
+                link="/siginin"
+                isMain={false}
+            />
+        </Attrs>
+        <Line/>
+    </>)
 }
 
 export default ProfileMeGnb
