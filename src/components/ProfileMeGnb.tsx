@@ -1,10 +1,7 @@
-import styled,{ useTheme } from "styled-components"
 import ProfileMeGnbAttr from "./ProfileMeGnbAttr"
+import styled from "styled-components"
 
-const ProfileMeGnb = () => {
-    const theme = useTheme()
-
-    const Attrs = styled.div`
+const Attrs = styled.div`
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -12,15 +9,15 @@ const ProfileMeGnb = () => {
         padding-left: 20px;
         padding-right: 20px;
     }
-    `
-    const Line = styled.div`
-        display: block;
-        width: 200px;
-        border-bottom: ${theme.sizes.strokes.regular} ${theme.colors.strokes.nav} solid;
-        margin: 10px auto;
-    `
+`
+const Line = styled.div`
+    display: block;
+    width: 200px;
+    border-bottom: ${props => props.theme.sizes.strokes.regular} ${props => props.theme.colors.strokes.nav} solid;
+    margin: 10px auto;
+`
 
-    return (<>
+const ProfileMeGnb = () => (<>
         <Attrs>
             <ProfileMeGnbAttr
                 label="Profile"
@@ -40,6 +37,5 @@ const ProfileMeGnb = () => {
         </Attrs>
         <Line/>
     </>)
-}
 
 export default ProfileMeGnb
