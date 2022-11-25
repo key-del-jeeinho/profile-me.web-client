@@ -2,13 +2,13 @@ import { AppProps } from 'next/app'
 import '../../styles/global.css'
 import "../../public/fonts/style.css"
 import withTheme from '../../styles/withTheme'
-import { RecoilRoot } from 'recoil'
+import withRecoil from '../recoil/withRecoil'
 
 const App = ({Component, pageProps}: AppProps) => {
     return <>{withTheme(() => (
-        <RecoilRoot>
+        withRecoil(() => (
             <Component {...pageProps}/>
-        </RecoilRoot>
+        ))
     ))}</>
 }
 

@@ -1,5 +1,7 @@
 import { addDecorator } from "@storybook/react";
 import withTheme from "../styles/withTheme";
+import withRecoil from "../src/recoil/withRecoil"
+
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,3 +14,4 @@ export const parameters = {
 }
 
 addDecorator(withTheme)
+addDecorator(withRecoil)
