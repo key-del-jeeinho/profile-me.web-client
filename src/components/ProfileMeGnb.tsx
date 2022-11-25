@@ -1,5 +1,7 @@
 import ProfileMeGnbAttr from "./ProfileMeGnbAttr"
 import styled from "styled-components"
+import { withDetails } from "../recoil/gnb"
+import { useRecoilValue } from "recoil"
 
 const Attrs = styled.div`
     display: flex;
@@ -17,25 +19,20 @@ const Line = styled.div`
     margin: 10px auto;
 `
 
-const ProfileMeGnb = () => (<>
-        <Attrs>
-            <ProfileMeGnbAttr
-                label="Profile"
-                link="/profile"
-                isMain={false}
-            />
-            <ProfileMeGnbAttr
-                label="Main"
-                link="/"
-                isMain={true}
-            />
-            <ProfileMeGnbAttr
-                label="Signin"
-                link="/siginin"
-                isMain={false}
-            />
-        </Attrs>
+const ProfileMeGnb = () => {
+    const data = useRecoilValue(withDetails)
+    return (<>
+        <Attrs>{ 
+            data.map(attr => {
+                return <ProfileMeGnbAttr 
+                    label={`${attr.label}`}
+                    link={attr.link}
+                    isMain={attr.isMain}
+                />
+            })
+        }</Attrs>
         <Line/>
     </>)
+    }
 
 export default ProfileMeGnb
