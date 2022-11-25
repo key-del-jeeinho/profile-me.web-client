@@ -33,6 +33,6 @@ const ProfileMeGnb = () => {
         }</Attrs>
         <Line/>
     </>)
-    }
+}
 
 export default ProfileMeGnb
