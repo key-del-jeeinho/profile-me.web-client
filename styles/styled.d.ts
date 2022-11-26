@@ -25,6 +25,7 @@ declare module 'styled-components' {
                 tag_regular: string
             },
             font_weights: {
+                light: number
                 regular: number
             },
             strokes: {

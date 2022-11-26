@@ -24,6 +24,7 @@ const regularTheme: DefaultTheme = {
             tag_regular: "14px"
         },
         font_weights: {
+            light: 300,
             regular: 500
         },
         strokes: {
