@@ -4,6 +4,7 @@ interface Props {
     label?: string,
     placeholder: string,
     height: number,
+    isWritable: boolean,
     onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 const BoxStyle = styled.div`
@@ -15,14 +16,20 @@ const LabelStyle = styled.div`
     color: ${props => props.theme.colors.fonts.main};
 `
 
-const InputStyle = styled.div<{ height: number }>`
+const InputStyle = styled.div<{
+    height: number
+    isWritable: boolean
+}>`
     textarea {
         box-sizing: border-box;
         width: 200px;
         min-height: 30px;
         height: ${props => props.height + 'px'};
         border-radius: 10px;
-        border: 1px solid ${props => props.theme.colors.strokes.input};
+        border: 1px solid ${props => props.isWritable 
+            ? props.theme.colors.strokes.input
+            : props.theme.colors.strokes.input_unwritable
+        };
         padding: 0px 0px 0px 9px;
         padding-top: 9px;
 
@@ -56,18 +63,19 @@ const InputStyle = styled.div<{ height: number }>`
     }
 `
 
-const InputBox = ({label, placeholder, height, onChange}: Props) => {
+const InputBox = ({label, placeholder, height, isWritable, onChange}: Props) => {
     const isLabeled = !!label
     
     return (
         <>
             <BoxStyle>
                 {isLabeled ? <LabelStyle>{label}</LabelStyle> : ''}
-                <InputStyle height={height}>
+                <InputStyle height={height} isWritable={isWritable}>
                     <textarea
                         rows={1}
                         onChange={onChange}
                         placeholder={placeholder}
+                        readOnly={!isWritable}
                     />
                 </InputStyle>
             </BoxStyle>

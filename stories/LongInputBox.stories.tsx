@@ -13,6 +13,7 @@ Main.args = {
     label: '',
     placeholder: '내용을 입력해주세요',
     height: 100,
+    isWritable: true,
     onChange: (content) => { console.log(`content changed! - ${content}}`) }
 }
 

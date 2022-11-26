@@ -2,9 +2,11 @@ import styled from "styled-components"
 
 interface Props {
     label?: string,
-    placeholder: string
+    placeholder: string,
+    isWritable: boolean,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
+
 const LabelStyle = styled.div`
     padding-bottom: 5px;
 
@@ -12,13 +14,16 @@ const LabelStyle = styled.div`
     color: ${props => props.theme.colors.fonts.main};
 `
 
-const InputStyle = styled.div`
+const InputStyle = styled.div<{isWritable: boolean}>`
     input {
         box-sizing: border-box;
         width: 200px;
         height: 30px;
         border-radius: 10px;
-        border: 1px solid ${props => props.theme.colors.strokes.input};
+        border: 1px solid ${props => props.isWritable 
+            ? props.theme.colors.strokes.input
+            : props.theme.colors.strokes.input_unwritable
+        };
         padding: 0px 0px 0px 9px;
 
         font-size: ${props => props.theme.sizes.fonts.regular};
@@ -38,15 +43,15 @@ const InputStyle = styled.div`
     }
 `
 
-const InputBox = ({label, placeholder, onChange}: Props) => {
+const InputBox = ({label, placeholder, isWritable, onChange}: Props) => {
     const isLabeled = !!label
     
     return (
         <>
             <div>
                 {isLabeled ? <LabelStyle>{label}</LabelStyle> : ''}
-                <InputStyle>
-                    <input onChange={e => onChange} placeholder={placeholder}/>
+                <InputStyle isWritable={isWritable}>
+                    <input onChange={e => onChange} placeholder={placeholder} readOnly={!isWritable}/>
                 </InputStyle>
             </div>
         </>
