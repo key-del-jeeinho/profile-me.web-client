@@ -1,4 +1,4 @@
-import ContentMeGnbAttr from "./ContentMeGnbAttr"
+import GnbAttr from "./GnbAttr"
 import styled from "styled-components"
 import gnbAtom, { withDetails } from "../recoil/gnb"
 import { useRecoilValue } from "recoil"
@@ -22,13 +22,13 @@ const Line = styled.div`
     margin: 10px auto;
 `
 
-const ContentMeGnb = () => {
+const Gnb = () => {
     const data = useRecoilValue(withDetails)
     return (<>
         <Attrs>{ 
             data.map((attr, idx) => (
                         <Attr order={attr.order} >
-                            <ContentMeGnbAttr 
+                            <GnbAttr 
                                 label={`${attr.label}`}
                                 link={attr.link}
                                 isMain={attr.isMain}
@@ -40,4 +40,4 @@ const ContentMeGnb = () => {
     </>)
 }
 
-export default ContentMeGnb
+export default Gnb

@@ -1,14 +1,14 @@
-import ContentMeGnb from "../src/components/ContentMeGnb";
+import Gnb from "../src/components/Gnb";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {
     title: 'Global/Gnb',
-    component: ContentMeGnb
-} as ComponentMeta<typeof ContentMeGnb>
+    component: Gnb
+} as ComponentMeta<typeof Gnb>
 
-const Template: ComponentStory<typeof ContentMeGnb> = (args) => <ContentMeGnb/>
+const Template: ComponentStory<typeof Gnb> = (args) => <Gnb/>
 
-const Gnb = Template.bind({})
+const Main = Template.bind({})
 
 export default meta
-export { Gnb as Gnb }
+export { Main as Gnb }
