@@ -43,7 +43,8 @@ const regularTheme: DefaultTheme = {
             btn_cta: "#FFFFFF",
             select: "#FFFFFF",
             select_hover: "F7F7F7",
-            input: "#FFFFFF"
+            input: "#FFFFFF",
+            scroll_thumb: "#000000",
         },
         strokes: {
             nav: "#000000",

@@ -45,6 +45,7 @@ declare module 'styled-components' {
                 select: string,
                 select_hover: string,
                 input: string
+                scroll_thumb: string,
             },
             strokes: {
                 nav: string,
