@@ -13,6 +13,8 @@ const Attrs = styled.div`
     }
 `
 const Attr = styled.span<{order: number}> `
+    min-width: 70px;
+    text-align: center;
     order: ${props => props.order};
 `
 const Line = styled.div`
