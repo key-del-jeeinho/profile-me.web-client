@@ -12,9 +12,9 @@ const GlobalStyle = createGlobalStyle`
         color:#fff;
     }
 
-    body {
-        font-family: 'Pretendard-Regular'
-    }
+body {
+    font-family: 'Pretendard'
+}
 `
 
 export default GlobalStyle
