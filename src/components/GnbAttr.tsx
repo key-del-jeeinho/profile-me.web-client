@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 interface Props {
-    label: string,
+    children: string,
     link: string,
     isMain: boolean
 }
@@ -22,6 +22,10 @@ const Common = styled.span<CommonProps>`
     }
 `
 
-const GnbAttr = ({label, link, isMain}: Props) => (<a href={link}><Common isMain={isMain}>{label}</Common></a>)
+const GnbAttr = ({children, link, isMain}: Props) => (
+    <a href={link}>
+        <Common isMain={isMain}>{children}</Common>
+    </a>
+)
 
 export default GnbAttr

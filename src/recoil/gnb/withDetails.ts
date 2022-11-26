@@ -24,7 +24,7 @@ export default gnbWithDetails
 let details: {
     [key: string]: 
     {
-        label: String, 
+        label: string, 
         link: string
     }
 } = {}

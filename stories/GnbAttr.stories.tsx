@@ -6,18 +6,20 @@ const meta = {
     component: GnbAttr
 } as ComponentMeta<typeof GnbAttr>
 
-const Template: ComponentStory<typeof GnbAttr> = (args) => <GnbAttr {...args}/>
+const Template: ComponentStory<typeof GnbAttr> = (args) => (
+    <GnbAttr {...args}>{args.children}</GnbAttr>
+)
 
 const Main = Template.bind({})
 Main.args = {
-    label: "main",
+    children: "main",
     link: "#you-clicked-link-main",
     isMain: true
 }
 
 const Sub = Template.bind({})
 Sub.args = {
-    label: "sub",
+    children: "sub",
     link: "#you-clicked-link--sub",
     isMain: false
 }

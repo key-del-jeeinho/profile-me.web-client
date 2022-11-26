@@ -29,10 +29,9 @@ const Gnb = () => {
             data.map((attr, idx) => (
                         <Attr order={attr.order} >
                             <GnbAttr 
-                                label={`${attr.label}`}
                                 link={attr.link}
                                 isMain={attr.isMain}
-                            />
+                            >{attr.label}</GnbAttr>
                         </Attr>
                     ))
         }</Attrs>

@@ -11,12 +11,12 @@ const Style = styled.span<{isMain: boolean}>`
 `
 
 interface Props{
-    title: string,
+    children: string,
     isMain: boolean
 }
 
-const Title = ({title, isMain}: Props) => (
-    <Style isMain = {isMain}>{title}</Style>
+const Title = ({children, isMain}: Props) => (
+    <Style isMain = {isMain}>{children}</Style>
 )
 
 export default Title
