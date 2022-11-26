@@ -14,6 +14,7 @@ const LabelStyle = styled.div`
 
 const InputStyle = styled.div`
     input {
+        box-sizing: border-box;
         width: 200px;
         height: 30px;
         border-radius: 10px;

@@ -6,10 +6,11 @@ interface Props {
 }
 
 const Common = styled.span`
-    display: block;
+    box-sizing: border-box;
+    display: flex;
 
     width: fit-content;
-    height: fit-content;
+    height: 50px;
 
     color: ${props => props.theme.colors.fonts.btn_cta};
     background-color: ${props => props.theme.colors.backgrounds.btn_cta};
@@ -30,7 +31,6 @@ const ContentBox = styled.span`
     align-items: center;
 
     min-width: 200px;
-    height: 50px;
     padding: 0px 25px 0px 25px;
 
     font-size: ${props => props.theme.sizes.fonts.btn_regular};
