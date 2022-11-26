@@ -26,12 +26,15 @@ const InputStyle = styled.div<{isWritable: boolean}>`
         };
         padding: 0px 0px 0px 9px;
 
+        font-family: "Pretendard";
         font-size: ${props => props.theme.sizes.fonts.regular};
         color: ${props => props.theme.colors.fonts.main};
-        font-family: "Pretendard";
     }
 
     input:focus {
+        ::placeholder {
+            color: transparent;
+        }
         outline: none;
     }
 
@@ -51,7 +54,10 @@ const InputBox = ({label, placeholder, isWritable, onChange}: Props) => {
             <div>
                 {isLabeled ? <LabelStyle>{label}</LabelStyle> : ''}
                 <InputStyle isWritable={isWritable}>
-                    <input onChange={e => onChange} placeholder={placeholder} readOnly={!isWritable}/>
+                    <input 
+                    onChange={e => onChange} 
+                    placeholder={placeholder} 
+                    readOnly={!isWritable}/>
                 </InputStyle>
             </div>
         </>

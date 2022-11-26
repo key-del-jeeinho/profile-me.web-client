@@ -30,17 +30,18 @@ const InputStyle = styled.div<{
             ? props.theme.colors.strokes.input
             : props.theme.colors.strokes.input_unwritable
         };
-        padding: 0px 0px 0px 9px;
-        padding-top: 9px;
+        padding: 9px 0px 0px 9px;
 
         font-family: "Pretendard";
         font-size: ${props => props.theme.sizes.fonts.regular};
         color: ${props => props.theme.colors.fonts.main};
-
         resize: none;
     }
 
     textarea:focus {
+        ::placeholder {
+            color: transparent;
+        }
         outline: none;
     }
 
