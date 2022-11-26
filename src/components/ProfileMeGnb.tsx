@@ -1,6 +1,6 @@
 import ProfileMeGnbAttr from "./ProfileMeGnbAttr"
 import styled from "styled-components"
-import { withDetails } from "../recoil/gnb"
+import gnbAtom, { withDetails } from "../recoil/gnb"
 import { useRecoilValue } from "recoil"
 
 const Attrs = styled.div`
@@ -11,6 +11,9 @@ const Attrs = styled.div`
         padding-left: 20px;
         padding-right: 20px;
     }
+`
+const Attr = styled.span<{order: number}> `
+    order: ${props => props.order};
 `
 const Line = styled.div`
     display: block;
@@ -23,13 +26,15 @@ const ProfileMeGnb = () => {
     const data = useRecoilValue(withDetails)
     return (<>
         <Attrs>{ 
-            data.map(attr => {
-                return <ProfileMeGnbAttr 
-                    label={`${attr.label}`}
-                    link={attr.link}
-                    isMain={attr.isMain}
-                />
-            })
+            data.map((attr, idx) => (
+                        <Attr order={attr.order} >
+                            <ProfileMeGnbAttr 
+                                label={`${attr.label}`}
+                                link={attr.link}
+                                isMain={attr.isMain}
+                            />
+                        </Attr>
+                    ))
         }</Attrs>
         <Line/>
     </>)

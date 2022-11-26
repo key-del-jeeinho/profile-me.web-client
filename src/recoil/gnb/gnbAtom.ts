@@ -1,5 +1,5 @@
 import { atom } from "recoil"
-import { NavbarAttribute } from "../../interface/GnbAttribute"
+import { GnbAttributeType } from "../../interface/GnbAttributeType"
 
 const ORDER_MAIN = 2
 const gnbAtom = atom({
@@ -7,13 +7,15 @@ const gnbAtom = atom({
     default: {
         data: [
             {
-                attr: NavbarAttribute.PROFILE,
+                attr: GnbAttributeType.PROFILE,
                 order: 1
-            }, {
-                attr: NavbarAttribute.MAIN,
+            },
+            {
+                attr: GnbAttributeType.MAIN,
                 order: 2
-            }, {
-                attr: NavbarAttribute.SIGN_IN,
+            },
+            {
+                attr: GnbAttributeType.SIGN_IN,
                 order: 3
             }
         ]

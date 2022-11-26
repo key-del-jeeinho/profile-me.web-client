@@ -1,7 +1,7 @@
-enum GnbAttribute {
+enum GnbAttributeType {
     PROFILE = 'PROFILE',
     MAIN = 'MAIN',
     SIGN_IN = 'SIGN_IN'
 }
 
-export { GnbAttribute as NavbarAttribute }
+export { GnbAttributeType }
