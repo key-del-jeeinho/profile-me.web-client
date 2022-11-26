@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const Style = styled.span<{isMain: boolean}>`
-    font-family: 'Pretendard';
     font-weight: ${props => props.isMain ? 'bold' : 'regular'};
     font-size: ${ props => props.isMain 
     ? props.theme.sizes.fonts.title_main 
@@ -15,8 +14,7 @@ interface Props{
     isMain: boolean
 }
 
-const Title = ({children, isMain}: Props) => (
+const Title = ({children, isMain}: Props) => 
     <Style isMain = {isMain}>{children}</Style>
-)
 
 export default Title
