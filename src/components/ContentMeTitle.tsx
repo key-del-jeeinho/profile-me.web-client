@@ -15,8 +15,8 @@ interface Props{
     isMain: boolean
 }
 
-const ProfileMeTitle = ({title, isMain}: Props) => (
+const ContentMeTitle = ({title, isMain}: Props) => (
     <Style isMain = {isMain}>{title}</Style>
 )
 
-export default ProfileMeTitle
+export default ContentMeTitle

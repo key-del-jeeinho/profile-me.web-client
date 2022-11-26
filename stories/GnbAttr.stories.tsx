@@ -1,12 +1,12 @@
-import ProfileMeGnbAttr from "../src/components/ProfileMeGnbAttr";
+import ContentMeGnbAttr from "../src/components/ContentMeGnbAttr";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const meta = {
     title: 'Global/Gnb/Attribute',
-    component: ProfileMeGnbAttr
-} as ComponentMeta<typeof ProfileMeGnbAttr>
+    component: ContentMeGnbAttr
+} as ComponentMeta<typeof ContentMeGnbAttr>
 
-const Template: ComponentStory<typeof ProfileMeGnbAttr> = (args) => <ProfileMeGnbAttr {...args}/>
+const Template: ComponentStory<typeof ContentMeGnbAttr> = (args) => <ContentMeGnbAttr {...args}/>
 
 const Main = Template.bind({})
 Main.args = {

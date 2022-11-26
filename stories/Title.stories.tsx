@@ -1,12 +1,12 @@
-import ProfileMeTitle from "../src/components/ProfileMeTitle";
+import ContentMeTitle from "../src/components/ContentMeTitle";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {
     title: 'Global/Title',
-    component: ProfileMeTitle
-} as ComponentMeta<typeof ProfileMeTitle>
+    component: ContentMeTitle
+} as ComponentMeta<typeof ContentMeTitle>
 
-const Template: ComponentStory<typeof ProfileMeTitle> = (args) => <ProfileMeTitle {...args}/>
+const Template: ComponentStory<typeof ContentMeTitle> = (args) => <ContentMeTitle {...args}/>
 
 const Title = Template.bind({title: 'title'})
 

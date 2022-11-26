@@ -22,6 +22,6 @@ const Common = styled.span<CommonProps>`
     }
 `
 
-const ProfileMeGnbAttr = ({label, link, isMain}: Props) => (<a href={link}><Common isMain={isMain}>{label}</Common></a>)
+const ContentMeGnbAttr = ({label, link, isMain}: Props) => (<a href={link}><Common isMain={isMain}>{label}</Common></a>)
 
-export default ProfileMeGnbAttr
+export default ContentMeGnbAttr
