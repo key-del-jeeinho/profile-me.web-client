@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Style = styled.span<{isMain: boolean}>`
     font-family: 'Pretendard';
-    font-weight: bold;
+    font-weight: ${props => props.isMain ? 'bold' : 'regular'};
     font-size: ${ props => props.isMain 
     ? props.theme.sizes.fonts.title_main 
     : props.theme.sizes.fonts.title_sub
