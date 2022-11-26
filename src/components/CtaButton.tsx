@@ -11,10 +11,11 @@ const Common = styled.span`
     width: fit-content;
     height: fit-content;
 
+    color: ${props => props.theme.colors.fonts.btn_cta};
+    background-color: ${props => props.theme.colors.backgrounds.btn_cta};
+    box-shadow: ${props => props.theme.shadows.box.regular};
     border: ${props => props.theme.sizes.strokes.regular} solid ${props => props.theme.colors.strokes.btn_cta};
     border-radius: 25px;
-
-    box-shadow: ${props => props.theme.shadows.box.regular};
     
     transition: box-shadow 0.2s linear;
 
