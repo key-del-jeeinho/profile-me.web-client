@@ -2,7 +2,7 @@ import CtaButton from "../src/components/CtaButton"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 const meta = {
-    title: 'Global/Button/CTA',
+    title: 'Global/Button',
     component: CtaButton
 } as ComponentMeta<typeof CtaButton>
 

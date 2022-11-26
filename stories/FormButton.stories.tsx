@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import FormButton from "../src/components/FormButton";
 
 const meta = {
-    title: 'Global/Button/Form',
+    title: 'Global/Button',
     component: FormButton
 } as ComponentMeta<typeof FormButton>
 
