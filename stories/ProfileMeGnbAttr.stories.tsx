@@ -2,7 +2,7 @@ import ProfileMeGnbAttr from "../src/components/ProfileMeGnbAttr";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const meta = {
-    title: 'Global/Lnb/Attribute',
+    title: 'Global/Gnb/Attribute',
     component: ProfileMeGnbAttr
 } as ComponentMeta<typeof ProfileMeGnbAttr>
 

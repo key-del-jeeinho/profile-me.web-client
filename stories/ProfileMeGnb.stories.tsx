@@ -2,13 +2,13 @@ import ProfileMeGnb from "../src/components/ProfileMeGnb";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {
-    title: 'Global/Lnb',
+    title: 'Global/Gnb',
     component: ProfileMeGnb
 } as ComponentMeta<typeof ProfileMeGnb>
 
 const Template: ComponentStory<typeof ProfileMeGnb> = (args) => <ProfileMeGnb/>
 
-const Navbar = Template.bind({})
+const Gnb = Template.bind({})
 
 export default meta
-export { Navbar }
+export { Gnb as Gnb }
