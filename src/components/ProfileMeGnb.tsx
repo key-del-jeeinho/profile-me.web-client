@@ -12,6 +12,9 @@ const Attrs = styled.div`
         padding-right: 20px;
     }
 `
+const Attr = styled.span<{order: number}> `
+    order: ${props => props.order};
+`
 const Line = styled.div`
     display: block;
     width: 200px;
@@ -23,13 +26,15 @@ const ProfileMeGnb = () => {
     const data = useRecoilValue(withDetails)
     return (<>
         <Attrs>{ 
-            data.map(attr => {
-                return <ProfileMeGnbAttr 
-                    label={`${attr.label}`}
-                    link={attr.link}
-                    isMain={attr.isMain}
-                />
-            })
+            data.map((attr, idx) => (
+                        <Attr order={attr.order} >
+                            <ProfileMeGnbAttr 
+                                label={`${attr.label}`}
+                                link={attr.link}
+                                isMain={attr.isMain}
+                            />
+                        </Attr>
+                    ))
         }</Attrs>
         <Line/>
     </>)

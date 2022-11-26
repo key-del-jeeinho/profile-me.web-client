@@ -1,6 +1,6 @@
 import { selector } from "recoil";
 import gnbAtom, { ORDER_MAIN } from "./gnbAtom";
-import { NavbarAttribute } from "../../interface/GnbAttribute"
+import { GnbAttributeType } from "../../interface/GnbAttributeType"
 
 const gnbWithDetails = selector({
     key: "navbarWithDetails",
@@ -29,15 +29,15 @@ let details: {
     }
 } = {}
 
-details[NavbarAttribute.MAIN] = {
+details[GnbAttributeType.MAIN] = {
     label: "Main",
     link: "/"
 }
-details[NavbarAttribute.PROFILE] = {
+details[GnbAttributeType.PROFILE] = {
     label: "Profile",
     link: "/profile",
 }
-details[NavbarAttribute.SIGN_IN] = {
+details[GnbAttributeType.SIGN_IN] = {
     label: "Signin",
     link: "/signin"
 }
