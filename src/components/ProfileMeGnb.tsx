@@ -1,6 +1,6 @@
 import ProfileMeGnbAttr from "./ProfileMeGnbAttr"
 import styled from "styled-components"
-import { withDetails } from "../recoil/gnb"
+import gnbAtom, { withDetails } from "../recoil/gnb"
 import { useRecoilValue } from "recoil"
 
 const Attrs = styled.div`
