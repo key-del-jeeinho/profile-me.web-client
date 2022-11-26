@@ -6,6 +6,10 @@ declare module 'styled-components' {
             fonts: {
                 thin: string
                 light: string
+            },
+            box: {
+                regular: string,
+                strong: string
             }
         },
         sizes: {
@@ -19,6 +23,9 @@ declare module 'styled-components' {
                 nav_sub: string,
                 nav_main: string,
                 tag_regular: string
+            },
+            font_weights: {
+                regular: number
             },
             strokes: {
                 regular: string
