@@ -11,10 +11,6 @@ interface Props {
 }
 
 const Tag = ({children}: Props) =>
-<<<<<<< HEAD
     <Style>{children ? '#' : ''}{children}</Style>
-=======
-    <Style>#{children}</Style>
->>>>>>> c410f3fbcc18a2d8d3d2209c1b1d7e08400a5329
 
 export default Tag
