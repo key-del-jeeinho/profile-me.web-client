@@ -11,6 +11,6 @@ interface Props {
 }
 
 const Tag = ({children}: Props) =>
-    <Style>{children}</Style>
+    <Style>#{children}</Style>
 
 export default Tag
