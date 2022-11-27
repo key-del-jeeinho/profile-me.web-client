@@ -10,8 +10,7 @@ const Template: ComponentStory<typeof Tag> = (args) => (<Tag {...args}>{args.chi
 
 const Main = Template.bind({})
 Main.args = {
-    children: 'Tag',
-    isPlaceholder: false
+    children: 'Tag'
 }
 
 export default meta
