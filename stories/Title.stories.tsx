@@ -1,4 +1,4 @@
-import Title from "../src/components/Title";
+import Title from "../src/components/atom/Title";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {

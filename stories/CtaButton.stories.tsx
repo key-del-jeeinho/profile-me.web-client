@@ -1,4 +1,4 @@
-import CtaButton from "../src/components/CtaButton"
+import CtaButton from "../src/components/atom/CtaButton"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 const meta = {

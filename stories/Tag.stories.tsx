@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Tag from "../src/components/Tag";
+import Tag from "../src/components/atom/Tag";
 
 const meta = {
     title: 'Atom/Tag',

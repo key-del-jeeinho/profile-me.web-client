@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components'
-import Title from '../components/Title'
+import Title from '../components/atom/Title'
 
 const Index = () => {
   const theme = useTheme()

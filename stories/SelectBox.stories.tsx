@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import SelectBox from "../src/components/SelectBox";
+import SelectBox from "../src/components/molecule/SelectBox";
 
 const meta = {
-    title: 'Molecules/Box/Select',
+    title: 'Molecule/Box/Select',
     component: SelectBox
 } as ComponentMeta<typeof SelectBox>
 

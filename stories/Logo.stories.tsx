@@ -1,4 +1,4 @@
-import Logo from "../src/components/Logo"
+import Logo from "../src/components/atom/Logo"
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 
 const meta = {

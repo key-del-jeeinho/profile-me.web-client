@@ -1,4 +1,4 @@
-import Gnb from "../src/components/Gnb";
+import Gnb from "../src/components/organism/Gnb";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {

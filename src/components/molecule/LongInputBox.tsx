@@ -1,4 +1,4 @@
-import Text from "./Text"
+import Text from "../atom/Text"
 import styled from "styled-components"
 
 interface Props {

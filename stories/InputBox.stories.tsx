@@ -1,8 +1,8 @@
-import InputBox from "../src/components/InputBox";
+import InputBox from "../src/components/molecule/InputBox";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 const meta = {
-    title: 'Molecules/Box/Input',
+    title: 'Molecule/Box/Input',
     component: InputBox
 } as ComponentMeta<typeof InputBox>
 

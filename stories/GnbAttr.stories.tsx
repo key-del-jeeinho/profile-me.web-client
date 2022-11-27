@@ -1,4 +1,4 @@
-import GnbAttr from "../src/components/GnbAttr";
+import GnbAttr from "../src/components/atom/GnbAttr";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const meta = {

@@ -1,6 +1,6 @@
-import GnbAttr from "./GnbAttr"
+import GnbAttr from "../atom/GnbAttr"
 import styled from "styled-components"
-import gnbAtom, { withDetails } from "../recoil/gnb"
+import gnbAtom, { withDetails } from "../../recoil/gnb"
 import { useRecoilValue } from "recoil"
 
 const Attrs = styled.div`

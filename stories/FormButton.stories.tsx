@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import FormButton from "../src/components/FormButton";
+import FormButton from "../src/components/atom/FormButton";
 
 const meta = {
     title: 'Atom/Button',

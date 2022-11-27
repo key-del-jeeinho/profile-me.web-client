@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useState } from "react";
-import TagWriter from "../src/components/TagWriter";
+import TagWriter from "../src/components/atom/TagWriter";
 
 const meta = {
-    title: 'Molecules/TagWriter',
+    title: 'Atom/TagWriter',
     component: TagWriter
 } as ComponentMeta<typeof TagWriter>
 
