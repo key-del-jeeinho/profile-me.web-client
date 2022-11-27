@@ -10,7 +10,7 @@ const Template: ComponentStory<typeof FormButton> = (args) => <FormButton {...ar
 
 const Main = Template.bind({})
 Main.args = {
-    label: "Submit"
+    text: "Submit"
 }
 
 export default meta

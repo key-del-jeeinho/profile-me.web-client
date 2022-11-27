@@ -10,7 +10,7 @@ const Template: ComponentStory<typeof CtaButton> = (args) => <CtaButton {...args
 
 const Main = Template.bind({})
 Main.args = {
-    label: "CTA"
+    text: "CTA"
 }
 
 export default meta

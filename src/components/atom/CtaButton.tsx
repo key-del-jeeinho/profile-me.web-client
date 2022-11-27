@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 interface Props {
-    label: string,
+    text: string,
     onClick: () => void
 }
 
@@ -37,10 +37,10 @@ const ContentBox = styled.span`
     font-weight: ${props => props.theme.sizes.font_weights.regular};
 `
 
-const CtaButton = ({label, onClick}: Props) => {
+const CtaButton = ({text, onClick}: Props) => {
     return (
         <Common>
-            <ContentBox onClick={onClick}>{label}</ContentBox>
+            <ContentBox onClick={onClick}>{text}</ContentBox>
         </Common>
     )
 }

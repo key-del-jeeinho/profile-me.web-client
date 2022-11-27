@@ -1,7 +1,8 @@
+import { text } from 'stream/consumers'
 import styled from 'styled-components'
 
 interface Props {
-    label: string,
+    text: string,
     onClick: () => void
 }
 
@@ -37,10 +38,10 @@ const ContentBox = styled.span`
     font-weight: ${props => props.theme.sizes.font_weights.regular};
 `
 
-const FormButton = ({label, onClick}: Props) => {
+const FormButton = ({text, onClick}: Props) => {
     return (
         <Common>
-            <ContentBox onClick={onClick}>{label}</ContentBox>
+            <ContentBox onClick={onClick}>{text}</ContentBox>
         </Common>
     )
 }
