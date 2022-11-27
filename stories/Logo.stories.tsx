@@ -2,7 +2,7 @@ import Logo from "../src/components/Logo"
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 
 const meta = {
-    title: 'Global/Logo',
+    title: 'Atom/Logo',
     component: Logo
 } as ComponentMeta<typeof Logo>
 

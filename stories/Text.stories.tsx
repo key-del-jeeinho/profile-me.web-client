@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Text from "../src/components/Text";
 
 const meta = {
-    title: 'Global/Text',
+    title: 'Atom/Text',
     component: Text
 } as ComponentMeta<typeof Text>
 

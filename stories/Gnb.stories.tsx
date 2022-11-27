@@ -2,7 +2,7 @@ import Gnb from "../src/components/Gnb";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const meta = {
-    title: 'Global/Gnb',
+    title: 'Organism/Gnb',
     component: Gnb
 } as ComponentMeta<typeof Gnb>
 

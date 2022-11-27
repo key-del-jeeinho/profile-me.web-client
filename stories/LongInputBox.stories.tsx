@@ -2,7 +2,7 @@ import LongInputBox from "../src/components/LongInputBox";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 const meta = {
-    title: 'Global/Box/Input',
+    title: 'Molecules/Box/Input',
     component: LongInputBox
 } as ComponentMeta<typeof LongInputBox>
 

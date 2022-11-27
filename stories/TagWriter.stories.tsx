@@ -3,7 +3,7 @@ import { useState } from "react";
 import TagWriter from "../src/components/TagWriter";
 
 const meta = {
-    title: 'Global/TagWriter',
+    title: 'Molecules/TagWriter',
     component: TagWriter
 } as ComponentMeta<typeof TagWriter>
 

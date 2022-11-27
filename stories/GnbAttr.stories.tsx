@@ -2,7 +2,7 @@ import GnbAttr from "../src/components/GnbAttr";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const meta = {
-    title: 'Global/Gnb/Attribute',
+    title: 'Atom/GnbAttribute',
     component: GnbAttr
 } as ComponentMeta<typeof GnbAttr>
 
