@@ -1,3 +1,4 @@
+import Text from "./Text"
 import styled from "styled-components"
 
 interface Props {
@@ -9,9 +10,6 @@ interface Props {
 
 const LabelStyle = styled.div`
     padding-bottom: 5px;
-
-    font-size: ${props => props.theme.sizes.fonts.regular};
-    color: ${props => props.theme.colors.fonts.main};
 `
 
 const InputStyle = styled.div<{isWritable: boolean}>`
@@ -52,7 +50,12 @@ const InputBox = ({label, placeholder, isWritable, onChange}: Props) => {
     return (
         <>
             <div>
-                {isLabeled ? <LabelStyle>{label}</LabelStyle> : ''}
+                {isLabeled 
+                ? (
+                    <LabelStyle>
+                        <Text size='regular' type='normal'>{label}</Text>
+                    </LabelStyle>
+                ) : ''}
                 <InputStyle isWritable={isWritable}>
                     <input 
                     onChange={e => onChange} 

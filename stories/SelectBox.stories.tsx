@@ -10,8 +10,8 @@ const Template: ComponentStory<typeof SelectBox> = (args) => <SelectBox {...args
 
 const Main = Template.bind({})
 Main.args = {
-    placeholder: "옵션을 선택해주세요",
     label: "",
+    placeholder: "옵션을 선택해주세요",
     data: [
         { label: "옵션1", key: "1", value: "option_1" },
         { label: "옵션2", key: "2", value: "option_2" },

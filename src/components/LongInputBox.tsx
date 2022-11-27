@@ -1,3 +1,4 @@
+import Text from "./Text"
 import styled from "styled-components"
 
 interface Props {
@@ -70,7 +71,12 @@ const InputBox = ({label, placeholder, height, isWritable, onChange}: Props) => 
     return (
         <>
             <BoxStyle>
-                {isLabeled ? <LabelStyle>{label}</LabelStyle> : ''}
+                {isLabeled 
+                ? (
+                    <LabelStyle>
+                        <Text size='regular' type='normal'>{label}</Text>
+                    </LabelStyle>
+                ) : ''}
                 <InputStyle height={height} isWritable={isWritable}>
                     <textarea
                         rows={1}

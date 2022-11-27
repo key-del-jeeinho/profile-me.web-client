@@ -1,3 +1,4 @@
+import Text from "./Text"
 import styled from "styled-components"
 
 interface Props {
@@ -45,7 +46,12 @@ const SelectBox = ({data, label, placeholder}: Props) => {
     return (
         <>
             <div>
-                {isLabeled? <LabelStyle>{label}</LabelStyle>: ''}
+                {isLabeled 
+                ? (
+                    <LabelStyle>
+                        <Text size='regular' type='normal'>{label}</Text>
+                    </LabelStyle>
+                ) : ''}
                 <SelectStyle>
                     <select>
                         <option value="" disabled selected>{placeholder}</option>
