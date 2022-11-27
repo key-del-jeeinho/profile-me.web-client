@@ -11,7 +11,8 @@ const Template: ComponentStory<typeof Text> = (args) => (<Text {...args}>{args.c
 const Main = Template.bind({})
 Main.args = {
     children: 'text',
-    size: 'regular'
+    size: 'regular',
+    type: 'normal'
 }
 
 export default meta
