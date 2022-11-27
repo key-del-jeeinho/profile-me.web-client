@@ -9,24 +9,17 @@ interface Props {
 
 const Circle = styled.div`
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     backdrop-filter: invert(100%);
-    margin: 0px 50px 0px 50px;
-`
-const Lines = styled.div `
-    position: absolute;
+    margin: 0px 40px 0px 40px;
 `
 
-const Rectengle = styled.div`
-    @keyframes box-ani {
-        from {
-            transform: translate(0, 0);
-        }
-        to {
-            transform: translate(0px, -20px);
-        }
+const Rectengle = styled.div<{isAnimated: boolean}>`
+    @keyframes logo-anim {
+        from { transform: translate(0, 0); }
+        to { transform: translate(0px, -40px); }
     }
     display: block;
     margin: 0 auto;
@@ -36,28 +29,53 @@ const Rectengle = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
-    margin: 10px 0px 10px 0px;
-    animation: box-ani 1s linear forwards infinite;
+    margin-top: 20px;
+    animation: ${props => props.isAnimated ? 'logo-anim 1s linear forwards infinite' : ''};
+`
+
+const Lines = styled.div `
+    position: absolute;
+`
+
+const CircleMaskedLines = styled.div`
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0px 40px 0px 40px;
+    overflow: hidden;
 `
 
 const Style = styled.div`
+    position: relative;
     width: 200px;
-    height: 100px;
+    height: 120px;
+    overflow: hidden;
 `
 
-
 const Logo = ({type, isAnimated}: Props) => {
+    const lines = (
+        <>
+            <Rectengle isAnimated={isAnimated}/>
+            <Rectengle isAnimated={isAnimated}/>
+            <Rectengle isAnimated={isAnimated}/>
+            <Rectengle isAnimated={isAnimated}/>
+        </>
+    )
+    const maskedLines = getMaskedLines(lines, type)
     return (<>
         <Style>
-            <Lines>
-                <Rectengle/>
-                <Rectengle/>
-                <Rectengle/>
-                <Rectengle/>
-            </Lines>
+            { maskedLines }
             <Circle/>
         </Style>
     </>)
+}
+
+const getMaskedLines = (lines: JSX.Element, type: LogoType) => {
+    switch(type) {
+        case 'simple': return <CircleMaskedLines>{lines}</CircleMaskedLines>
+        case 'basic': return <Lines>{lines}</Lines>
+    }
 }
 
 export default Logo
