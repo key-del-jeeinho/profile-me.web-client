@@ -35,6 +35,7 @@ const regularTheme: DefaultTheme = {
         fonts: {
             main: "#000000",
             error: "#FF7171",
+            link: "#2C67FF",
             placeholder: "#BBBBBB",
             btn_form: "#FFFFFF",
             btn_cta: "#000000",

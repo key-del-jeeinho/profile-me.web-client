@@ -36,6 +36,7 @@ declare module 'styled-components' {
             fonts: {
                 main: string,
                 error: string,
+                link: string,
                 placeholder: string,
                 btn_form: string,
                 btn_cta: string,

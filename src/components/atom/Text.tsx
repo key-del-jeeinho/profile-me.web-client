@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-type TextType = 'normal' | 'error'
+type TextType = 'normal' | 'error' | 'link'
 
 const Style = styled.span<{size: 'regular' | 'bigger', type: TextType}>`
     font-size: ${props => {
@@ -12,6 +12,7 @@ const Style = styled.span<{size: 'regular' | 'bigger', type: TextType}>`
         switch(props.type) {
             case 'normal': return props.theme.colors.fonts.main
             case 'error': return props.theme.colors.fonts.error
+            case 'link': return props.theme.colors.fonts.link
         }}
     };
 `
