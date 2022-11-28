@@ -30,7 +30,7 @@ const ContentBox = styled.span`
     justify-content: center;
     align-items: center;
 
-    min-width: 200px;
+    min-width: 150px;
     padding: 0px 25px 0px 25px;
 
     font-size: ${props => props.theme.sizes.fonts.btn_regular};
